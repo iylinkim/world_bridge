@@ -15,5 +15,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script async>
+     function handleHeight(){
+      const root = document.querySelector('#root');
+      const windowHeight = window.innerHeight;
+      root.style.height = windowHeight +'px';
+     }
+      window.addEventListener('resize', handleHeight);
+      handleHeight();
+    </script>
   </body>
 </html>

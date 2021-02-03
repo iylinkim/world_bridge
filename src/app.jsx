@@ -1,37 +1,42 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./app.css";
 import Picture from "./components/Picture";
 
 function App() {
-  console.log("render app");
-
-  const [pictures, setPictures] = useState();
-  const [num, setNum] = useState();
+  const [pictures, setPictures] = useState([]);
+  const [num, setNum] = useState(0);
 
   const getPictures = async () => {
-    const query = "on the bridge";
+    const query = "famous bridge";
     const response = await axios(
       `https://api.unsplash.com/photos/random?query=${query}&count=30&client_id=${process.env.REACT_APP_API_KEY}`
     );
     return response;
   };
 
-  const getRandomNum = () => {
-    const random = Math.floor(Math.random() * 29);
+  const getRandomNum = (count) => {
+    const random = Math.floor(Math.random() * count);
     return random;
   };
 
+  const loadPictures = useCallback(async () => {
+    await getPictures().then((result) => {
+      let pics = result.data;
+      pics = pics.filter((pic) => pic.location.name !== null);
+      setPictures(pics);
+      setNum(getRandomNum(pics.length));
+    });
+  });
+
   const onClick = () => {
-    setNum(getRandomNum());
-  }
+    // getPictures().then((result) => setPictures(result.data));
+    loadPictures();
+  };
 
   useEffect(() => {
-    setNum(getRandomNum());
-  }, []);
-
-  useEffect(() => {
-    getPictures().then((data) => setPictures(data.data));
+    // getPictures().then((result) => setPictures(result.data));
+    loadPictures();
   }, []);
 
   return (
@@ -44,10 +49,11 @@ function App() {
           <span>World bridges</span>
         </h1>
       </header>
-      {pictures && <Picture picture={pictures[num]} />}
+      {pictures.length > 0 && <Picture picture={pictures[num]} />}
       <button className="button" onClick={onClick}>
         Explore bridges of the world!
       </button>
+      {pictures.length > 0 && <button>true</button>}
     </div>
   );
 }
