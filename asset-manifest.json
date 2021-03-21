@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/world_bridge/static/css/main.0fc1baa6.chunk.css",
-    "main.js": "/world_bridge/static/js/main.4eb8e27e.chunk.js",
-    "main.js.map": "/world_bridge/static/js/main.4eb8e27e.chunk.js.map",
+    "main.css": "/world_bridge/static/css/main.e6a5ff51.chunk.css",
+    "main.js": "/world_bridge/static/js/main.4eb9d74a.chunk.js",
+    "main.js.map": "/world_bridge/static/js/main.4eb9d74a.chunk.js.map",
     "runtime-main.js": "/world_bridge/static/js/runtime-main.89e510eb.js",
     "runtime-main.js.map": "/world_bridge/static/js/runtime-main.89e510eb.js.map",
     "static/js/2.c5f19633.chunk.js": "/world_bridge/static/js/2.c5f19633.chunk.js",
     "static/js/2.c5f19633.chunk.js.map": "/world_bridge/static/js/2.c5f19633.chunk.js.map",
     "index.html": "/world_bridge/index.html",
-    "static/css/main.0fc1baa6.chunk.css.map": "/world_bridge/static/css/main.0fc1baa6.chunk.css.map",
+    "static/css/main.e6a5ff51.chunk.css.map": "/world_bridge/static/css/main.e6a5ff51.chunk.css.map",
     "static/js/2.c5f19633.chunk.js.LICENSE.txt": "/world_bridge/static/js/2.c5f19633.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.89e510eb.js",
     "static/js/2.c5f19633.chunk.js",
-    "static/css/main.0fc1baa6.chunk.css",
-    "static/js/main.4eb8e27e.chunk.js"
+    "static/css/main.e6a5ff51.chunk.css",
+    "static/js/main.4eb9d74a.chunk.js"
   ]
 }
