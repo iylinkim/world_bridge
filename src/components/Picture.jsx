@@ -22,10 +22,10 @@ const Pictures = ({ picture }) => {
             <img src={urls.regular} alt={name} />
           </p>
           <div className="pic_info">
-            <p className="pic_date">{updated_at}</p>
+            <p className="pic_date">{new Date(updated_at).toLocaleDateString()}</p>
             {/* <p className="pic_desc">{description}</p> */}
             <div className="pic_user">
-              photo by
+              <span className="photo_by">photo by</span>
               <p className="user_img">
                 <img src={profile_image.small} alt={username} />
               </p>
