@@ -13,6 +13,7 @@ li {
 }
 
 #wrap {
+  min-width:850px;
   height: 100%;
 }
 

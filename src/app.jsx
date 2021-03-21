@@ -44,7 +44,7 @@ function App() {
       <header id="header">
         <h1 className="logo">
           <span className="logoImg">
-            <img src="/images/bridge.png" alt="bridge icon" />
+            <img src="images/bridge.png" alt="bridge icon" />
           </span>
           <span>World bridges</span>
         </h1>
