@@ -5,9 +5,8 @@ const Pictures = ({ picture }) => {
     urls,
     location: { name },
     user: { profile_image, username, updated_at },
-    description,
   } = picture;
-  console.log(picture);
+  console.log(picture.urls)
   return (
     <section className="section">
       {picture === undefined ? (
@@ -23,7 +22,6 @@ const Pictures = ({ picture }) => {
           </p>
           <div className="pic_info">
             <p className="pic_date">{new Date(updated_at).toLocaleDateString()}</p>
-            {/* <p className="pic_desc">{description}</p> */}
             <div className="pic_user">
               <span className="photo_by">photo by</span>
               <p className="user_img">

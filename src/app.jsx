@@ -23,19 +23,19 @@ function App() {
   const loadPictures = useCallback(async () => {
     await getPictures().then((result) => {
       let pics = result.data;
-      pics = pics.filter((pic) => pic.location.name !== null);
+      pics = pics.filter(
+        (pic) => pic.location.name !== null && pic.location.urls !== null
+      );
       setPictures(pics);
       setNum(getRandomNum(pics.length));
     });
   });
 
   const onClick = () => {
-    // getPictures().then((result) => setPictures(result.data));
     loadPictures();
   };
 
   useEffect(() => {
-    // getPictures().then((result) => setPictures(result.data));
     loadPictures();
   }, []);
 
